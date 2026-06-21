@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日本史 一問一答チャレンジ｜高校入試対策</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="app">
+
+    <!-- ========== スタート画面 ========== -->
+    <section id="screen-start" class="screen active">
+      <header class="hero">
+        <h1>日本史 一問一答チャレンジ</h1>
+        <p class="subtitle">高校入試対策・4択クイズ</p>
+      </header>
+
+      <div class="card">
+        <h2>① 出題する時代をえらぼう</h2>
+        <p class="hint">いくつでも選べます。「全部」を押すと全時代から出題します。</p>
+        <div class="era-controls">
+          <button type="button" id="btn-select-all" class="mini-btn">全部えらぶ</button>
+          <button type="button" id="btn-clear-all" class="mini-btn">クリア</button>
+        </div>
+        <div id="era-list" class="era-list">
+          <!-- 時代チェックボックスをJSで生成 -->
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>② 問題数をえらぼう</h2>
+        <div id="count-list" class="count-list">
+          <!-- 5〜50 ボタンをJSで生成 -->
+        </div>
+      </div>
+
+      <div class="card start-card">
+        <p id="start-summary" class="start-summary"></p>
+        <button type="button" id="btn-start" class="primary-btn" disabled>スタート！</button>
+      </div>
+    </section>
+
+    <!-- ========== クイズ画面 ========== -->
+    <section id="screen-quiz" class="screen">
+      <div class="quiz-topbar">
+        <span id="quiz-progress" class="quiz-progress">第1問 / 全10問</span>
+        <span id="quiz-era" class="quiz-era">鎌倉時代</span>
+      </div>
+      <div class="progress-bar"><div id="progress-fill" class="progress-fill"></div></div>
+
+      <div class="card quiz-card">
+        <div id="quiz-image-wrap" class="quiz-image-wrap" hidden>
+          <img id="quiz-image" src="" alt="" loading="lazy">
+          <span id="quiz-image-caption" class="quiz-image-caption"></span>
+        </div>
+        <p id="quiz-question" class="quiz-question"></p>
+        <div id="quiz-options" class="quiz-options"></div>
+        <p id="quiz-feedback" class="quiz-feedback" hidden></p>
+        <div id="quiz-explanation" class="quiz-explanation" hidden></div>
+        <button type="button" id="btn-next" class="primary-btn" hidden>次の問題へ →</button>
+      </div>
+      <button type="button" id="btn-quit" class="text-btn">やめてスタート画面へ</button>
+    </section>
+
+    <!-- ========== 結果画面 ========== -->
+    <section id="screen-result" class="screen">
+      <div class="card result-card">
+        <h2>おつかれさま！</h2>
+        <div id="result-score" class="result-score"></div>
+        <p id="result-message" class="result-message"></p>
+      </div>
+
+      <div id="review-section" class="card" hidden>
+        <h2>まちがえた問題のふりかえり</h2>
+        <p class="hint">最初の解答でまちがえた問題です。もう一度かくにんしよう。</p>
+        <div id="review-list" class="review-list"></div>
+      </div>
+
+      <div class="card result-actions">
+        <button type="button" id="btn-retry-wrong" class="primary-btn" hidden>まちがえた問題だけもう一度</button>
+        <button type="button" id="btn-home" class="secondary-btn">スタート画面にもどる</button>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="js/app.js"></script>
+</body>
+</html>
