@@ -1,9 +1,17 @@
 {
   "title": "日本史 一問一答チャレンジ",
-  "version": 1,
+  "version": 2,
   "eras": [
+    { "id": "genshi", "name": "旧石器・縄文・弥生時代", "range": "〜3世紀", "file": "genshi.json", "total": 20 },
+    { "id": "kofun-asuka", "name": "古墳・飛鳥時代", "range": "3世紀〜710", "file": "kofun-asuka.json", "total": 20 },
+    { "id": "nara", "name": "奈良時代", "range": "710〜794", "file": "nara.json", "total": 20 },
+    { "id": "heian", "name": "平安時代", "range": "794〜1185", "file": "heian.json", "total": 20 },
     { "id": "kamakura", "name": "鎌倉時代", "range": "1185頃〜1333", "file": "kamakura.json", "total": 20 },
     { "id": "muromachi", "name": "室町時代", "range": "1336〜1573", "file": "muromachi.json", "total": 20 },
-    { "id": "edo", "name": "江戸時代", "range": "1603〜1867", "file": "edo.json", "total": 20 }
+    { "id": "azuchi-momoyama", "name": "安土桃山時代", "range": "1573〜1603", "file": "azuchi-momoyama.json", "total": 20 },
+    { "id": "edo", "name": "江戸時代", "range": "1603〜1867", "file": "edo.json", "total": 20 },
+    { "id": "meiji", "name": "明治時代", "range": "1868〜1912", "file": "meiji.json", "total": 20 },
+    { "id": "taisho", "name": "大正時代", "range": "1912〜1926", "file": "taisho.json", "total": 20 },
+    { "id": "showa-heisei", "name": "昭和・平成時代", "range": "1926〜2019", "file": "showa-heisei.json", "total": 20 }
   ]
 }
