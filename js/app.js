@@ -191,8 +191,9 @@ function renderQuestion() {
   const cap = document.getElementById('quiz-image-caption');
   if (q.image) {
     img.src = q.image;
-    img.alt = q.imageCaption || '';
+    img.alt = '問題の挿絵'; // 画像が読めない場合でも答え（説明文）を表示しない
     cap.textContent = q.imageCaption || '';
+    cap.hidden = true; // 解答するまでは説明（＝答えになりうる）を隠す
     imgWrap.hidden = false;
     img.onerror = () => { imgWrap.hidden = true; }; // 画像切れでも進行可能
   } else {
@@ -260,6 +261,10 @@ function handleAnswer(btn, isCorrect, q) {
       b.classList.add('dimmed');
     }
   });
+
+  // 正解後に、隠していた挿絵の説明を表示する
+  const cap = document.getElementById('quiz-image-caption');
+  if (cap.textContent) cap.hidden = false;
 
   // 解説表示
   const exp = document.getElementById('quiz-explanation');

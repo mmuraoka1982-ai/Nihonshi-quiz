@@ -163,6 +163,7 @@ html, body {
   object-fit: contain; background: #fafbfe;
 }
 .quiz-image-caption { display: block; font-size: 0.78rem; color: var(--ink-soft); margin-top: 4px; }
+.quiz-image-caption[hidden] { display: none; } /* 解答前は説明を隠す（hidden属性を有効化） */
 
 .quiz-question { font-size: 1.2rem; font-weight: 700; margin: 4px 0 18px; }
 
